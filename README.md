@@ -11,7 +11,7 @@ A small StyleSheet framework to build yours views in record time.
 
 with StyleSheet
 
-```
+```JSX
 <View style={{ width:300, height:500 }}>
   <Text style={{ fontSize:40 }}>hello</Text>
 </View>
@@ -19,7 +19,7 @@ with StyleSheet
 
 with react-native-fast-ui
 
-```
+```JSX
 import { styles as dm } from 'react-native-fast-ui'
 
 <View style={{ ...dm.w_300, ...dm.h_500 }}>
@@ -29,7 +29,7 @@ import { styles as dm } from 'react-native-fast-ui'
 
 without react-native-fast-ui
 
-```
+```JSX
 import { Platform , ... } from "react-native";
 
  <Text style={{
@@ -43,7 +43,7 @@ import { Platform , ... } from "react-native";
 
 with react-native-fast-ui
 
-```
+```JSX
 import { styles as dm, IS_ANDROID } from 'react-native-fast-ui'
 
  <Text style={{ ...dm.c_black, ...dm.f_25, ...dm.ma_ver_10 }}>
