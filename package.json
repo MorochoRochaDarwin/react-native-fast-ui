@@ -1,6 +1,6 @@
 {
   "name": "react-native-fast-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "description": "A small StyleSheet framework to build your views in record time",
   "scripts": {
@@ -9,6 +9,7 @@
     "flow": "flow",
     "pretest": "npm run flow && npm run lint"
   },
+  "homepage": "https://github.com/MorochoRochaDarwin/react-native-fast-ui",
   "keywords": [
     "StyleSheet",
     "StatusBarHeight",
