@@ -1,13 +1,22 @@
 {
   "name": "react-native-fast-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": false,
+  "description": "A small StyleSheet framework to build your views in record time",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "flow": "flow",
     "pretest": "npm run flow && npm run lint"
   },
+  "keywords": [
+    "StyleSheet",
+    "StatusBarHeight",
+    "react-native responsive fonts",
+    "react-native StyleSheet",
+    "react-native-fast-ui",
+    "react-native StatusBarHeight"
+  ],
   "license": "MIT",
   "author": {
     "name": "Darwin Morocho",

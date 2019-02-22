@@ -1,6 +1,6 @@
 # react-native-fast-ui
 
-A small StyleSheet framework to build yours views in record time.
+A small StyleSheet framework to build your views in record time.
 
 ## **Installation**
 
@@ -62,8 +62,6 @@ import { styles as dm, IS_ANDROID } from 'react-native-fast-ui'
 ```JSX
 import React, { Component } from "react";
 import {
-  Platform,
-  StyleSheet,
   Text,
   View,
   Image,
