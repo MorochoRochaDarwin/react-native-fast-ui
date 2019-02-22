@@ -1,11 +1,13 @@
 # react-native-fast-ui
-
 A small StyleSheet framework to build your views in record time.
 
 ## **Installation**
 
-`npm install --save react-native-fast-ui`
-`yarn add react-native-fast-ui`
+```npm install --save react-native-fast-ui```
+
+or 
+
+```yarn add react-native-fast-ui```
 
 ## **Why use react-native-fast-ui?**
 
