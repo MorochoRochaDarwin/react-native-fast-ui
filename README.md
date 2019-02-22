@@ -200,11 +200,11 @@ export default class App extends Component<{}> {
 
 ### **Responsive FontSize**
 
-The minimum value for the responsive font size is 5 and the maximum value is 100.
+The minimum value for the responsive fontSize is 5 and the maximum value is 100.
 
-First import the styles as an alias, now you can define a fontSize like this
+First import the styles, now you can define a fontSize like this
 
-```
+```JSX
 import { styles as dm } from 'react-native-fast-ui'
 
 
@@ -223,4 +223,31 @@ dm.f_7,
 .
 dm.f_100
 */
+```
+
+
+### **alignItems**
+```JSX
+center: {
+    alignItems: "center",
+    justifyContent: "center"
+},
+ai_c: { alignItems: "center" }
+ai_fs: { alignItems: "flex-start" }
+ai_fe: { alignItems: "flex-end" }
+ai_st: { alignItems: "stretch" } 
+ai_b: { alignItems: "baseline" }
+```
+
+
+First import the styles, now you can define the alignItems like this
+```JSX
+import { styles as dm } from 'react-native-fast-ui'
+.
+.
+.
+{/* creates a text center vertical and horizontal inside a view container with width:400, height:400*/}
+<View style={{ ...dm.center, ...dm.w_400, ...dm.h_400 }}>
+  <Text style={{ ...dm.f_30 }}>Responsive fontSize 20</Text>
+</View>
 ```
