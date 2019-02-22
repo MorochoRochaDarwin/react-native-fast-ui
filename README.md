@@ -120,7 +120,7 @@ export default class App extends Component<{}> {
             The Device Height is {SCREEN_HEIGHT}
           </Text>
 
-          {/* create a Toolbar with absolute position, height 55, flexDirection row, alignItems: "center", alignContent: "space-between" */}
+          {/* create a Toolbar with absolute position, height 55, flexDirection row, alignItems: "center", justifyContent: "space-between" */}
           <View
             style={{
               ...dm.p_a,
