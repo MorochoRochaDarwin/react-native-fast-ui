@@ -1,0 +1,3 @@
+rootProject.name = 'RNFastStyles'
+
+include ':app'
