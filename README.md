@@ -1,25 +1,63 @@
-RNSwipeVerify
-=========
+# react-native-fast-ui
 
 A small StyleSheet framework to build yours views in record time.
 
 ## **Installation**
-  `npm install --save react-native-fast-ui`
-   `yarn add react-native-fast-ui`
+
+`npm install --save react-native-fast-ui`
+`yarn add react-native-fast-ui`
+
+## **Why use react-native-fast-ui?**
+
+with StyleSheet
+
+```
+<View style={{ width:300, height:500 }}>
+  <Text style={{ fontSize:40 }}>hello</Text>
+</View>
+```
+
+with react-native-fast-ui
+
+```
+import { styles as dm } from 'react-native-fast-ui'
+
+<View style={{ ...dm.w_300, ...dm.h_500 }}>
+  <Text style={{ ...dm.f_40 }}>hello</Text>
+</View>
+```
+
+without react-native-fast-ui
+
+```
+import { Platform , ... } from "react-native";
+
+ <Text style={{
+   color:'#000000',
+   fontSize:40,
+   marginVertical:10
+  }}>
+    Welcome to React Native on { Platform.OS==='Android' ? "Android" : "iOS" }
+</Text>
+```
+
+with react-native-fast-ui
+
+```
+import { styles as dm, IS_ANDROID } from 'react-native-fast-ui'
+
+ <Text style={{ ...dm.c_black, ...dm.f_25, ...dm.ma_ver_10 }}>
+    Welcome to React Native on { IS_ANDROID ? "Android" : "iOS" }
+</Text>
+```
 
 ## **Preview**
 
-| | |
-| --- | --- |
-| <img width="259" alt="lo" src="https://user-images.githubusercontent.com/15864336/48955616-ba636900-ef1c-11e8-915b-5fa53939ffb3.png"> | <img width="259" alt="lo" src="https://user-images.githubusercontent.com/15864336/49022236-5a5e0400-f162-11e8-9c71-50f21cd999e1.png"> |
+| iPhone X                                                                                                                              | iPad Pro                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| <img width="259" alt="lo" src="https://user-images.githubusercontent.com/15864336/53266640-67ca5200-36af-11e9-981b-5c6d77ae472d.png"> | <img width="259" alt="lo" src="https://user-images.githubusercontent.com/15864336/53266980-47e75e00-36b0-11e9-9ba4-10003152a583.png"> |
 
-
-
-
-
-
-## **Usage**
-
+## **Example**
 
 ```JSX
 import React, { Component } from "react";
@@ -48,7 +86,7 @@ const ICON_RADIUS = ICON_SIZE / 2;
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={{ ...dm.flex_1, ...dm.b_white, ...dm.center }}>
+      <View style={{ ...dm.flex_1, ...dm.b_white, paddingTop: STATUSBAR_HEIGHT }}>
         <View
           style={{
             backgroundColor: "#d2d2d2",
@@ -139,29 +177,50 @@ export default class App extends Component<{}> {
 }
 ```
 
-
-
-
-
-
 ## **Documentation**
 
 ### Constants
-| name | type | description |
-| --- | --- | --- |
-| IS_ANDROID | bool | is true if the OS is Android |
-| IS_IPHONE_X | bool | is true if the device is an iPhone X |
-| STATUSBAR_HEIGHT | number | gets the statusBar height on iOS and Android |
-| SCREEN_WIDTH | number | gets the screen width |
-| SCREEN_HEIGHT | number | gets the screen height |
-| WINDOW_HEIGHT | number | on Android and iOS **(no iPhone X)** returns the window height removed the statusbar height. **On iPhone X** returns the height of the SafeAreaView |
-| DIAGONAL_SCREEN | number | value for the diagonal screen usefull to create responsive contents |
 
-
+| name             | type   | description                                                                                                                                         |
+| ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IS_ANDROID       | bool   | is true if the OS is Android                                                                                                                        |
+| IS_IPHONE_X      | bool   | is true if the device is an iPhone X                                                                                                                |
+| STATUSBAR_HEIGHT | number | gets the statusBar height on iOS and Android                                                                                                        |
+| SCREEN_WIDTH     | number | gets the screen width                                                                                                                               |
+| SCREEN_HEIGHT    | number | gets the screen height                                                                                                                              |
+| WINDOW_HEIGHT    | number | on Android and iOS **(no iPhone X)** returns the window height removed the statusbar height. **On iPhone X** returns the height of the SafeAreaView |
+| DIAGONAL_SCREEN  | number | value for the diagonal screen usefull to create responsive contents                                                                                 |
 
 ### Methods
 
-| name |  return | notes |
-| --- | --- | --- |
-| WP(percent: number) | number | gets the a percent of the screen width |
+| name                | return | notes                                   |
+| ------------------- | ------ | --------------------------------------- |
+| WP(percent: number) | number | gets the a percent of the screen width  |
 | HP(percent: number) | number | gets the a percent of the screen height |
+
+### **Responsive FontSize**
+
+The minimum value for the responsive font size is 5 and the maximum value is 100.
+
+First import the styles as an alias, now you can define a fontSize like this
+
+```
+import { styles as dm } from 'react-native-fast-ui'
+
+
+/// in your render method
+<Text style={{ ...dm.f_30, color:'#000' }}>Responsive fontSize 20</Text>
+
+<Text style={{ ...dm.f_100, color:'#000' }}>Responsive fontSize 100</Text>
+
+/*
+you can use
+dm.f_5
+dm.f_6,
+dm.f_7,
+.
+.
+.
+dm.f_100
+*/
+```

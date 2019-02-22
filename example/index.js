@@ -28,7 +28,9 @@ const ICON_RADIUS = ICON_SIZE / 2;
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={{ ...dm.flex_1, ...dm.b_white, ...dm.center }}>
+      <View
+        style={{ ...dm.flex_1, ...dm.b_white, paddingTop: STATUSBAR_HEIGHT }}
+      >
         <View
           style={{
             backgroundColor: "#d2d2d2",
